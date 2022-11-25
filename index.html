@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+
+</head>
+
+
+   
+<body>
+
+    <div id="app">
+        <div class="hompage">
+            <h1>Hey There<br>
+                I’m Lynn
+            </h1>
+
+            <div class="bg_txt">
+                <p>Lynn Chen</p>
+            </div>
+
+            <div class="button_wrap">
+                <button @click="scrollBlock(1)" >About me</button>
+                <button @click="scrollBlock(2)" >My work</button>
+                <button @click="scrollBlock(3)" >Contact me</button>
+                <button @click="scrollBlock(4)" >Learning Notes</button>
+            </div>
+
+            <div class="pic_box">
+                <img src="avatar.png" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="aboutMe" ref="section1">
+            <div class="photo_box"> 
+                <img src="avatar02.png" alt="">
+            </div>
+          
+            <section class="expriences">
+                <div class="link-top"></div>
+                <div class="item">
+                    世新大學<br>廣播電視電影學系
+                </div>
+                    
+                <div class="item">
+                    佳音英語 八德分校 <br>英文老師
+                </div>  
+                
+                <div class="item">
+                     葛洛莉英語 <br>英文老師
+                </div>
+                
+                <div class="item">
+                    Tibame 緯育 <br>前端工程師養成班
+                </div>
+            </section>
+
+          <!-- <section class="skills">
+            <div class="item">
+                HTML
+            </div> -->
+            <!-- <div class="item">
+
+            </div>
+            <div class="item">
+
+            </div>
+            <div class="item">
+
+            </div> -->
+            </section>
+        </div>
+
+
+
+        <div class="myWork" ref="section2"></div>
+        <div class="contactMe" ref="section3"></div>
+        <div class="learningNote" ref="section4"></div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+ 
+    Vue.createApp({
+        data(){
+            return {}
+        },
+
+
+        methods: {
+            scrollBlock(block){
+                const box = this.$refs[`section${block}`]
+                window.scrollTo({
+                top: box.offsetTop,
+                behavior: "smooth"
+             })
+            }
+        },
+
+
+
+
+
+            
+    }).mount("#app") 
+</script>
+</html>

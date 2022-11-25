@@ -1,10 +1,134 @@
-p {
-  font-size: 200px;
-  color: orangered;
-}
-
-
 body{
-  background-color: plum;
-  width: 1200px;
+  background-color:white;
 }
+
+.hompage {
+    width: 100%;
+    height: 100vh;
+    background: url("bgpink.png") no-repeat;
+    position: relative;
+    animation-name: MoveToRight;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 4s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 0s;    /*動畫延遲開始時間*/
+    animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/  
+    position: relative;
+  }
+  @keyframes  MoveToRight {
+    from {left:-100%;}
+    to {left:0%;}
+  }
+
+  .pic_box{
+    position: absolute;
+    top:250px;
+    right: 700px;
+  }
+
+
+  .hompage h1 {
+    font: normal bold 110px/120% "DM Serif Display";
+    color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    width: 548px;
+    height: 288px;
+    left: 860px;
+    top: 120px;
+  }
+
+
+  .hompage p {
+    font: normal 400 180px "Lalezar";
+    width: 810px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.23);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 288px;
+    right: 1220px;
+  }
+  .hompage .button_wrap {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    animation-name: button;    /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 8s;    /*動畫持續時間，單位為秒*/
+    animation-delay: 0s;    /*動畫延遲開始時間*/
+    animation-iteration-count: 1;    /*動畫次數，infinite 為無限次*/  
+  }
+  @keyframes button {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+
+  .hompage .button_wrap button {
+    border-style: none;
+    background: none;
+    text-align: right;
+    font: normal 700 40px/148% "DM Serif Display";
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .hompage .button_wrap button:hover {
+    border-right: 13px solid #D4183F; 
+  }
+
+  
+  .aboutMe{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .myWork {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .contactMe {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .learningNote {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+
+
+  .aboutMe .photo_box{
+    width: 700px;
+    margin: auto;
+    margin-top: 100px;
+  }
+ 
+  .aboutMe .photo_box img{
+    width: 100%;
+  }
+
+  .aboutMe .expriences{
+    /* border: 1px solid rebeccapurple; */
+    width: 1260px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+
+  .aboutMe .expriences .item{
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+  }
+  .aboutMe .expriences .link-top {
+    width: 1200px;
+    height: 10px;
+    border-top: 5px solid black;
+}
+
